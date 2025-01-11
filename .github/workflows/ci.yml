@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+    #Allow you to run this workflow manually from the actions tab
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
