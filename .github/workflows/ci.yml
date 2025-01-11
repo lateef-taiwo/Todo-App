@@ -3,7 +3,7 @@ name: Todo-App CI pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
