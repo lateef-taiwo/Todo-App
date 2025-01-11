@@ -5,7 +5,7 @@ on:
     branches:
       - master
 
-    #Allow you to run this workflow manually from the actions tab
+    #Allow you to run this workflow automatically from the actions tab
   workflow_dispatch:
 
 jobs:
@@ -31,6 +31,6 @@ jobs:
         run: npm start
 
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: todo-app
