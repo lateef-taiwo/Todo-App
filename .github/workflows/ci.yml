@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - master
-
+      - dev
+      - feature/modify-ui-structure
+  pull_request:
+    branches:
+      - master
     #Allow you to run this workflow manually from the actions tab
   workflow_dispatch:
 
