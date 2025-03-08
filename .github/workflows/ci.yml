@@ -34,9 +34,6 @@ jobs:
     #   - name: Start the app
     #     run: npm start
 
-  Archive:
-    runs-on: ubuntu-latest
-    steps:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
