@@ -5,6 +5,12 @@ on:
   push:
     branches:
       - master
+      - feature/modify-ui-structure
+  
+  pull_request:
+    branches:
+      - master
+      - feature/modify-ui-structure    
 
     #Allow you to run this workflow manually from the actions tab
   workflow_dispatch:
@@ -36,4 +42,3 @@ jobs:
         with:
           name: todo-app
           path: ci.xml
-          
