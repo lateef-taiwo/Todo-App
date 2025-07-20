@@ -1,40 +1,23 @@
-name: Todo-App CI pipeline
+name: continuous-integration pipeline for nodejs App
 
 on:
   push:
     branches:
       - master
 
-    #Allow you to run this workflow manually from the actions tab
-  workflow_dispatch:
-
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
-
+          node-version: 18
+          cache: 'npm'
+        
       - name: Install dependencies
         run: npm install
-
-    #   - name: Run tests
-    #     run: npm test
-
-    #   - name: Start the app
-    #     run: npm start
-
-  Archive:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download production artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: todo-app    
-          path: ci.xml
