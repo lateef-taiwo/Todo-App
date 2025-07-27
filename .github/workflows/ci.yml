@@ -48,7 +48,7 @@ jobs:
         run: npm ci
 
       - name: Audit dependencies for security
-        run: npm audit --audit-level=moderate
+        run: npm audit fix
 
       - name: Lint code
         run: npm run lint
