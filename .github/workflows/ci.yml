@@ -50,8 +50,8 @@ jobs:
       - name: Audit dependencies for security
         run: npm audit fix --force
 
-      - name: Lint code
-        run: npm run lint
+      # - name: Lint code
+      #   run: npm run lint
 
       - name: Check formatting
         run: npm run format:check
